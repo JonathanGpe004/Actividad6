@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .counter {
+            font-size: 2em;
+            margin: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="counter">0</div>
+    <div class="buttons">
+        <button onclick="subirparriba()">subirparriba</button>
+        <button onclick="bajapabajo()">bajapabajo</button>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function subirparriba() {
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function bajapabajo() {
+            count--;
+            document.getElementById('counter').innerText = count;
+        }
+    </script>
+</body>
+</html>
